@@ -86,7 +86,7 @@ class type rec_in_channel = object
    * as collaborative effort of several library creators.
    *)
 
-  method input : string -> int -> int -> int
+  method input : bytes -> int -> int -> int
     (** Reads octets from the channel and puts them into the string. The
      * first [int] argument is the position of the substring, and the second
      * [int] argument is the length of the substring where the data are
@@ -142,7 +142,7 @@ class type rec_out_channel = object
    * as collaborative effort of several library creators.
    *)
 
-  method output : string -> int -> int -> int
+  method output : bytes -> int -> int -> int
     (** Takes octets from the string and writes them into the channel. The
      * first [int] argument is the position of the substring, and the second
      * [int] argument is the length of the substring where the data can
@@ -258,7 +258,7 @@ end
  *)
 class type compl_in_channel = object
 
-  method really_input : string -> int -> int -> unit
+  method really_input : bytes -> int -> int -> unit
     (** Reads exactly as many octets from the channel as the second [int]
      * argument specifies. The octets are placed at the position denoted
      * by the first [int] argument into the string.
@@ -271,7 +271,7 @@ class type compl_in_channel = object
     (** Reads exactly one character from the channel, or raises [End_of_file]
      *)
 
-  method input_line : unit -> string
+  method input_line : unit -> bytes
     (** Reads the next line from the channel. When the channel is already
      * at the end before [input_line] is called, the exception [End_of_file]
      * is raised.
@@ -297,14 +297,14 @@ end
  * detect the channel is non-blocking.
  *)
 class type compl_out_channel = object
-  method really_output : string -> int -> int -> unit
+  method really_output : bytes -> int -> int -> unit
     (** Writes exactly as many octets to the channel as the second [int]
      * argument specifies. The octets are taken from the string position
      * denoted by the first [int] argument.
      *)
   method output_char : char -> unit
     (** Writes exactly one character *)
-  method output_string : string -> unit
+  method output_string : bytes -> unit
     (** Writes exactly the passed string *)
   method output_byte : int -> unit
     (** Writes exactly one byte passed as integer code *)
@@ -371,7 +371,7 @@ class input_channel :
   (** Creates an input channel from an [in_channel], which must be open.
    *
    * The method [pos_in] reflects the real position in the channel as
-   * returned by [Pervasives.pos_in]. This works for both seekable and
+   * returned by [Stdlib.pos_in]. This works for both seekable and
    * non-seekable channels.
    *
    * The method [close_in] also closes the underlying [in_channel].
@@ -381,7 +381,7 @@ class input_channel :
 
 
 class input_command :
-  string ->
+  bytes ->
     in_obj_channel
   (** Runs the command with [/bin/sh], and reads the data the command prints
    * to stdout.
@@ -395,7 +395,7 @@ class input_command :
 
 
 class input_string :
-  ?pos:int -> ?len:int -> string ->
+  ?pos:int -> ?len:int -> bytes ->
     in_obj_channel
   (** Creates an input channel from a (constant) string.
    *
@@ -435,14 +435,14 @@ val lexbuf_of_in_obj_channel : in_obj_channel -> Lexing.lexbuf
    * This function does not work for non-blocking channels.
    *)
 
-val string_of_in_obj_channel : in_obj_channel -> string
+val string_of_in_obj_channel : in_obj_channel -> bytes
   (** Reads from the input channel until EOF and returns the characters
    * as string. The input channel is not closed.
    *
    * This function does not work for non-blocking channels.
    *)
 
-val lines_of_in_obj_channel : in_obj_channel -> string list
+val lines_of_in_obj_channel : in_obj_channel -> bytes list
   (** Reads from the input channel until EOF and returns the lines
    * as string list. The input channel is not closed.
    *
@@ -468,7 +468,7 @@ class output_channel :
   (** Creates an output channel writing into an [out_channel].
    *
    * The method [pos_out] reflects the real position in the channel as
-   * returned by [Pervasives.pos_out]. This works for both seekable and
+   * returned by [Stdlib.pos_out]. This works for both seekable and
    * non-seekable channels.
    *
    * The method [close_out] also closes the underlying [out_channel].
@@ -483,7 +483,7 @@ class output_channel :
 
 class output_command :
   ?onclose:(unit -> unit) ->              (* default: fun _ -> () *)
-  string ->
+  bytes ->
     out_obj_channel
   (** Runs the command with [/bin/sh], and data written to the channel is
    * piped to stdin of the command.
@@ -603,7 +603,7 @@ class out_obj_channel_delegation : ?close:bool -> out_obj_channel ->
  *)
 
 val lift_in :
-      ?eol:string list ->
+      ?eol:bytes list ->
       ?buffered:bool ->
       ?buffer_size:int ->
       ?pass_through:int ->
@@ -662,7 +662,7 @@ val lift_out :
 class virtual augment_raw_in_channel :
 object
   inherit compl_in_channel
-  method virtual input : string -> int -> int -> int
+  method virtual input : bytes -> int -> int -> int
     (** As in [raw_in_channel] *)
   method virtual close_in : unit -> unit
     (** As in [raw_in_channel] *)
@@ -692,7 +692,7 @@ class lift_rec_in_channel : ?start_pos_in:int -> rec_in_channel -> in_obj_channe
 class virtual augment_raw_out_channel :
 object
   inherit compl_out_channel
-  method virtual output : string -> int -> int -> int
+  method virtual output : bytes -> int -> int -> int
     (** As in [raw_out_channel] *)
   method virtual close_out : unit -> unit
     (** As in [raw_out_channel] *)
@@ -725,7 +725,7 @@ class lift_rec_out_channel :
 
 type input_result =
     [ `Data of int
-    | `Separator of string
+    | `Separator of bytes
     ]
 (** This type is for the method [enhanced_input] of [enhanced_raw_in_channel].
  * - [`Data n] means that [n] bytes have been copied to the target string
@@ -738,9 +738,9 @@ type input_result =
 class type enhanced_raw_in_channel =
 object
   inherit raw_in_channel
-  method private enhanced_input_line : unit -> string
+  method private enhanced_input_line : unit -> bytes
     (** An improved implementation of [input_line] that uses the buffer *)
-  method private enhanced_input : string -> int -> int -> input_result
+  method private enhanced_input : bytes -> int -> int -> input_result
     (** Works similar to [input], but distinguishes between normal data
      * and end-of-line separators. The latter are returned as
      * [`Separator s]. When normal data is found, it is copied to the
@@ -751,11 +751,11 @@ end
 
 
 class buffered_raw_in_channel :
-        ?eol:string list ->
+        ?eol:bytes list ->
         ?buffer_size:int ->     (* default: 4096 *)
         ?pass_through:int ->
-	raw_in_channel ->
-	  enhanced_raw_in_channel
+  raw_in_channel ->
+    enhanced_raw_in_channel
   (** This class adds a buffer to the underlying [raw_in_channel].
    * As additional feature, the method [enhanced_input_line] is a fast
    * version of [input_line] that profits from the buffer.
@@ -777,8 +777,8 @@ class buffered_raw_in_channel :
 class buffered_raw_out_channel :
         ?buffer_size:int ->     (* default: 4096 *)
         ?pass_through:int ->
-	raw_out_channel ->
-	  raw_out_channel
+  raw_out_channel ->
+    raw_out_channel
   (** This class adds a buffer to the underlying [raw_out_channel].
    *
    * @param buffer_size The size of the buffer, by default 4096.

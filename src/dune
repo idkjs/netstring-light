@@ -1,0 +1,9 @@
+(library
+ (name netstringlight)
+ (public_name netstring-light)
+  (modules_without_implementation nldate nlstring_str)
+ (libraries unix stdlib-shims))
+(env
+ (dev
+  (flags
+   (:standard -w -27-50-7))))

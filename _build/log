@@ -1,0 +1,2648 @@
+# dune build @check -w
+# OCAMLPARAM: unset
+# Workspace root: /Users/mando/Github/netstring-light
+$ /usr/local/bin/nproc > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune96120a.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune618a5a.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 253, characters 0-3:
+> 253 | let e_set() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : bytes -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input has type string -> int -> int -> int
+>        but is expected to have type bytes -> int -> int -> int
+>        Type string is not compatible with type bytes 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune2f42f2.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 253, characters 0-3:
+> 253 | let e_set() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlchannels.ml) > _build/default/src/.netstringlight.objs/nlchannels.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method really_input has type string -> int -> int -> unit
+>        but is expected to have type bytes -> int -> int -> unit
+>        Type string is not compatible with type bytes 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune37a71c.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 253, characters 0-3:
+> 253 | let e_set() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlchannels.ml) > _build/default/src/.netstringlight.objs/nlchannels.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string -> bytes
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string -> bytes
+>        Type bytes is not compatible with type string -> bytes 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune2440e4.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 253, characters 0-3:
+> 253 | let e_set() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlchannels.ml) > _build/default/src/.netstringlight.objs/nlchannels.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune40008d.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 253, characters 0-3:
+> 253 | let e_set () =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune2cc557.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 256, characters 0-3:
+> 256 | let set b k c =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune9adda2.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 260, characters 0-3:
+> 260 | let put_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dunefd4363.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 260, characters 0-3:
+> 260 | let put_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dunef273de.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 260, characters 0-3:
+> 260 | let put_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune1c40b1.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 260, characters 0-3:
+> 260 | let put_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dunebc4d00.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 260, characters 0-3:
+> 260 | let put_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune6b22d4.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 260, characters 0-3:
+> 260 | let put_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/duneec25a2.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 263, characters 0-3:
+> 263 | let put_string b p s =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune78ba52.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 271, characters 0-3:
+> 271 | let blit_from_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dunea9c8e3.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/netstring-light"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/netstring-light/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/netstring-light/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.6.0"
+#      ; target = "x86_64-apple-darwin20.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/nlbuffer.ml) > _build/default/src/.netstringlight.objs/nlbuffer.ml.d
+> File "src/nlbuffer.ml", line 271, characters 0-3:
+> 271 | let blit_from_string_invalid() =
+>       ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/nlencoding.mli) > _build/default/src/.netstringlight.objs/nlencoding.mli.d
+> File "src/nlencoding.mli", line 85, characters 1-4:
+> 85 | 	(** Encodes the string and returns it.
+>       ^^^
+> Error: This comment contains an unterminated string literal
+> File "src/nlencoding.mli", line 91, characters 59-61:
+> 91 | 	 *   As recommended by RFC 2045, the characters [!#$\@[]^`{|}~]
+>                                                                 ^^
+>   String literal begins here
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-50-7 -g -bin-annot -I src/.netstringlight.objs/byte -I /Users/mando/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -opaque -open Netstringlight -o src/.netstringlight.objs/byte/netstringlight__Nlchannels.cmo -c -impl src/nlchannels.ml)
+> File "src/nlchannels.ml", lines 247-328, characters 0-3:
+> 247 | object (self)
+> 248 |   val mutable str = (Bytes.to_string s)
+> 249 |   val mutable str_len =
+> 250 |     match len with
+> 251 |   None   -> Bytes.length s
+> ...
+> 325 |     if closed then self # complain_closed();
+> 326 |     str_pos
+> 327 | 
+> 328 | end
+> Error: The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type in_obj_channel
+>        The class type
+>          object
+>            val mutable closed : bool
+>            val mutable str : string
+>            val mutable str_len : int
+>            val mutable str_pos : int
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> bytes
+>            method pos_in : int
+>            method really_input : string -> int -> int -> unit
+>          end
+>        is not matched by the class type
+>          object
+>            method close_in : unit -> unit
+>            method input : string -> int -> int -> int
+>            method input_byte : unit -> int
+>            method input_char : unit -> char
+>            method input_line : unit -> string
+>            method pos_in : int
+>            method really_input : bytes -> int -> int -> unit
+>          end
+>        The method input_line has type unit -> bytes
+>        but is expected to have type unit -> string
+>        Type bytes is not compatible with type string 
+[2]

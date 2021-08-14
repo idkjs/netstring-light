@@ -1,0 +1,30 @@
+(** @canonical Netstringlight.Nlbuffer *)
+module Nlbuffer = Netstringlight__Nlbuffer
+
+
+(** @canonical Netstringlight.Nlbytes *)
+module Nlbytes = Netstringlight__Nlbytes
+
+
+(** @canonical Netstringlight.Nlchannels *)
+module Nlchannels = Netstringlight__Nlchannels
+
+
+(** @canonical Netstringlight.Nldate *)
+module Nldate = Netstringlight__Nldate
+
+
+(** @canonical Netstringlight.Nlencoding *)
+module Nlencoding = Netstringlight__Nlencoding
+
+
+(** @canonical Netstringlight.Nlsockaddr *)
+module Nlsockaddr = Netstringlight__Nlsockaddr
+
+
+(** @canonical Netstringlight.Nlstring_str *)
+module Nlstring_str = Netstringlight__Nlstring_str
+
+
+(** @canonical Netstringlight.Nlurl *)
+module Nlurl = Netstringlight__Nlurl
